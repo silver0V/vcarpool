@@ -12,9 +12,9 @@ include 'conn.php';
 </head>
 <body>
 <div class="topnav">
-    <a class="active" href="admingpg.php">Home</a>
+    <a href="admingpg.php">Home</a>
     <a href="#reports">Reports</a>
-    <a href="carverify.php?user=<?php echo $user?>">Car Verification</a>
+    <a class="active" href="carverify.php?user=<?php echo $user?>">Car Verification</a>
     <a href="#about">Account Level</a>
     <a class="right" href="index.php">Log Out</a>
     <a class="right" href="profile.php?user=<?php echo $user?>">Profile</a>
@@ -32,7 +32,7 @@ include 'conn.php';
           <th>License Plate</th>
           <th>Car Type</th>
           <th>Car Color</th>
-          <th>Action</th>
+          <th>Actions</th>
         </tr>
       </thead>
       <tbody>
@@ -53,7 +53,8 @@ include 'conn.php';
               <td><?php echo $row["carType"]?></td>
               <td><?php echo $row["color"]?></td>
               <td>
-              <a href="vcar.php?id=<?php echo $row['carID'];?>"><button class="btn btn-add"><i class="las la-edit"></i>Edit</button></a>
+              <a href="vcar.php?id=<?php echo $row['carID'];?>"><button class="btn-car">Approve</button></a>
+              <a href="vcar.php?id=<?php echo $row['carID'];?>"><button class="btn-car">Decline</button></a>
               </td>
             </tr>
   

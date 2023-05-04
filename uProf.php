@@ -10,4 +10,5 @@ $contactNum = $_POST['contactNum'];
 
 mysqli_query($conn, "UPDATE tbluser SET firstName='$firstName', lastName='$lastName', email='$email', 
 password='$pass', contactNum='$contactNum' WHERE userID='$user'");
+
 ?>
