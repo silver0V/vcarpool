@@ -48,14 +48,14 @@ if(isset($_POST["send"])){
     $mail->isSMTP();
     $mail->Host = 'smtp.gmail.com';
     $mail->SMTPAuth = true;
-    $mail->Username = 'zelver98051@gmail.com';
-    $mail->Password = 'jeskrcfpbqlcmnjn';
+    $mail->Username = 'jmvjunkshop@gmail.com';
+    $mail->Password = 'caidwatbnlzjccmv';
     $mail->SMTPSecure = 'ssl';
     $mail->Port = 465;
 
-    $mail->From='zelver98051@gmail.com';
+    $mail->From='jmvjunkshop@gmail.com';
     $mail->FromName='Carpool App';
-    $mail->setFrom('zelver98051@gmail.com', 'Carpool App');
+    $mail->setFrom('jmvjunkshop@gmail.com', 'Carpool App');
 
     $mail->addAddress($_POST["email"]);
 

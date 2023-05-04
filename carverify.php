@@ -32,6 +32,7 @@ include 'conn.php';
           <th>License Plate</th>
           <th>Car Type</th>
           <th>Car Color</th>
+          <th>Action</th>
         </tr>
       </thead>
       <tbody>
@@ -51,6 +52,9 @@ include 'conn.php';
               <td><?php echo $row["licensePlate"]?></td>
               <td><?php echo $row["carType"]?></td>
               <td><?php echo $row["color"]?></td>
+              <td>
+              <a href="vcar.php?id=<?php echo $row['carID'];?>"><button class="btn btn-add"><i class="las la-edit"></i>Edit</button></a>
+              </td>
             </tr>
   
         <?php }  }?>
