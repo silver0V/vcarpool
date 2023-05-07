@@ -5,5 +5,5 @@ $id = $_GET['id'];
 $approve = "approved";
 
 mysqli_query($conn, "UPDATE tblcar SET carStatus='$approve' WHERE carID='$id'");
-
+header('Location: carverify.php');
 ?>

@@ -1,5 +1,5 @@
 <?php
-include 'conn.php';
+include '../conn.php';
 
 $firstName = $_POST['Fname'];
 $lastName = $_POST['Lname'];
@@ -30,11 +30,13 @@ $result = mysqli_query($conn, $sql);
 <?php
 
 use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
 
-require 'phpmailer/src/Exception.php';
-require 'phpmailer/src/PHPMailer.php';
-require 'phpmailer/src/SMTP.php';
+// require 'phpmailer/src/Exception.php';
+// require 'phpmailer/src/PHPMailer.php';
+// require 'phpmailer/src/SMTP.php';
+require 'vendor/autoload.php';
 
 $firstName = $_POST['Fname'];
 $lastName = $_POST['Lname'];
@@ -45,19 +47,20 @@ $contactNum = $_POST['contactNum'];
 if(isset($_POST["send"])){
     $mail = new PHPMailer(true);
 
+    $mail->SMTPDebug = 0;
     $mail->isSMTP();
     $mail->Host = 'smtp.gmail.com';
     $mail->SMTPAuth = true;
-    $mail->Username = 'vcarpool47@gmail.com';
-    $mail->Password = 'jjmwupjobhooeyhn';
-    $mail->SMTPSecure = 'ssl';
-    $mail->Port = 465;
+    $mail->Username = 'zelver98051@gmail.com';
+    $mail->Password = 'tnqsdimutgcbbtto';
+    $mail->SMTPSecure = 'tls';
+    $mail->Port = 587;
 
-    $mail->From='vcarpool47@gmail.com';
-    $mail->FromName='Carpool App';
-    $mail->setFrom('vcarpool47@gmail.com', 'Carpool App');
+    // $mail->From='vcarpool47@gmail.com';
+    // $mail->FromName='Carpool App';
+    $mail->setFrom('zelver98051@gmail.com', 'Carpool App');
 
-    $mail->addAddress($_POST["email"]);
+    $mail->addAddress($email, $firstName);
 
     $mail->isHTML(true);
 
@@ -73,7 +76,7 @@ if(isset($_POST["send"])){
     "
     <script>
     alert('Check email for the next step of registration.');
-    window.location.href = 'index.php';
+    window.location.href = '../index.php';
     </script>
     ";
     // header("Location: index.php");

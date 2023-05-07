@@ -10,7 +10,7 @@
 <body>
 	<br>
 	<h1 style="text-align: center;">Registration Page</h1>
-    <form action="regacc.php" method="POST">
+    <form action="phpmailer/regacc.php" method="POST">
         <div class="container">
             <h3>Personal Information</h3>
             First Name<br>
