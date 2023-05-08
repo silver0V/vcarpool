@@ -38,6 +38,9 @@ $row = $query->fetch_array();
             Contact Number <br>
             <input type="text" name="contactNum" value="<?php echo $row['contactNum'];?>"> <br>
             <br>        
+            Valid ID <br>
+            <input type="text" name="validID" value="<?php echo $row['validID'];?>"> <br>
+            <br>     
             <button type="submit" name="send">Update</button>
         </div>
     </form>

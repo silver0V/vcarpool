@@ -8,13 +8,15 @@ $numSeat = $_POST['cSeats'];
 $licenseP = $_POST['cLPlate'];
 $carType = $_POST['cCType'];
 $color = $_POST['cColor'];
+$chassis = $_POST['cChassis'];
+$engine = $_POST['cEngine'];
 
 $sql = "SELECT * FROM tbluser WHERE email = '$email'";
 $result = mysqli_query($conn, $sql);
 
 if (mysqli_num_rows($result) === 0){
-$sql = "INSERT INTO tblcar (userID, brand, model, numSeats, licensePlate, carType, color, carStatus) 
-VALUES ('$user', '$brand', '$model', '$numSeat', '$licenseP', '$carType', '$color', 'in process')";
+$sql = "INSERT INTO tblcar (userID, brand, model, numSeats, licensePlate, carType, color, chassisNum, engineNum, carStatus) 
+VALUES ('$user', '$brand', '$model', '$numSeat', '$licenseP', '$carType', '$color', '$chassis', '$engine', 'in process')";
 $result = mysqli_query($conn, $sql);
 }else{
     echo 'error';

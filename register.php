@@ -28,6 +28,26 @@
             Contact Number <br>
             <input type="tel" size="50"  name="contactNum" placeholder="ex: 09XXXXXXXXX"> <br>
             <br>        
+
+            <!-- <h3>Address Information</h3>
+            Street / District<br>
+            <input type="text" size="50" name="streetDis" placeholder="Enter Street/District"> <br>
+            <br>
+            Barangay<br>
+            <input type="text" size="50" name="barangay" placeholder="Enter Barangay"> <br>
+            <br>
+            City / Municipality<br>
+            <input type="email" size="50" name="cityMun" placeholder="Enter City/Municipality"> <br>
+            <br>
+            Province <br>
+            <input type="password" size="50" name="province" placeholder="Enter Province"> <br>
+            <br>
+            Postal Code <br>
+            <input type="tel" size="50"  name="posCode" placeholder="ex: 3006"> <br>
+            <br>    
+            Region <br>
+            <input type="tel" size="50"  name="region" placeholder="ex: III"> <br>
+            <br>        -->
             <button type="submit" name="send">Register</button>
         </div>
     </form>

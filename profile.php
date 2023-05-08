@@ -37,7 +37,9 @@ $user = $_GET['user'];
               <span class="title">Email<br></span><?php echo $row['email']; ?><br>
               <span class="title">Password<br></span><?php echo $row['password']; ?><br>
               <span class="title">Contact Number<br></span><?php echo $row['contactNum']; ?><br>
-      <?php }  }?>
+              <span class="title">Valid ID<br></span><?php echo $row['validID']; ?><br>
+      <?php }  
+    }?>
 
       <a href="updateProf.php?user=<?php echo $user?>"><button type="button" class="updatebtn">Edit Profile</button></a>
 
@@ -56,7 +58,7 @@ $user = $_GET['user'];
       </thead>
       <tbody>
         <?php 
-        $sql = "SELECT * FROM tblcar WHERE userID='$user'";
+        $sql = "SELECT * FROM tblcar WHERE userID='$user' AND carStatus='approved'";
         $query = $conn->query($sql);
     
     

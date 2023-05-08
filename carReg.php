@@ -44,6 +44,12 @@ $user = $_GET['user'];
         <label for="cColor"><b>Car Color</b></label>  <br>
         <input type="text" placeholder="ex: Gray" size="20" name="cColor" required>
         <br>
+        <label for="cChassis"><b>Chassis Number / VIN</b></label>  <br>
+        <input type="text" placeholder="ex: 2H2XA59BWDY987665" size="20" name="cChassis" required>
+        <br>
+        <label for="cEngine"><b>Engine Number</b></label>  <br>
+        <input type="text" placeholder="ex: 52WVC10338" size="20" name="cEngine" required>
+        <br>
         <button type="submit">Register Car</button>
     </div>
 </form>
