@@ -12,12 +12,12 @@ include 'conn.php';
 </head>
 <body>
 <div class="topnav">
-    <a href="admingpg.php">Home</a>
+    <a href="adminpg.php">Home</a>
     <a href="#reports">Reports</a>
-    <a class="active" href="carverify.php?user=<?php echo $user?>">Car Verification</a>
-    <a href="#about">Account Level</a>
+    <a class="active" href="carverify.php">Car Verification</a>
+    <a href="userlist.php">List of Users</a>
     <a class="right" href="index.php">Log Out</a>
-    <a class="right" href="profile.php?user=<?php echo $user?>">Profile</a>
+    <a class="right" href="#">Profile</a>
 </div>
 
 <div class="car-verify">
@@ -53,8 +53,8 @@ include 'conn.php';
               <td><?php echo $row["carType"]?></td>
               <td><?php echo $row["color"]?></td>
               <td>
-              <a href="vcar.php?id=<?php echo $row['carID'];?>"><button class="btn-car">Approve</button></a>
-              <a href="vcar.php?id=<?php echo $row['carID'];?>"><button class="btn-car">Decline</button></a>
+              <a href="carYes.php?id=<?php echo $row['carID'];?>"><button class="btn-car">Approve</button></a>
+              <a href="carNo.php?id=<?php echo $row['carID'];?>"><button class="btn-car">Decline</button></a>
               </td>
             </tr>
   

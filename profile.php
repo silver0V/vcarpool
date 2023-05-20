@@ -19,6 +19,7 @@ $user = $_GET['user'];
   <a href="#about">About</a>
   <a class="right" href="index.php?user=<?php echo $user?>">Log Out</a>
   <a class="rightact" href="profile.php?user=<?php echo $user?>">Profile</a>
+  <a class="right" href="wallet.php?user=<?php echo $user?>">Wallet</a>
 </div>
 <br>
 <div class="profile">
@@ -54,6 +55,9 @@ $user = $_GET['user'];
           <th>License Plate</th>
           <th>Car Type</th>
           <th>Car Color</th>
+          <th>Chassis Number</th>
+          <th>Engine Number</th>
+          <th>Action</th>
         </tr>
       </thead>
       <tbody>
@@ -73,6 +77,11 @@ $user = $_GET['user'];
               <td><?php echo $row["licensePlate"]?></td>
               <td><?php echo $row["carType"]?></td>
               <td><?php echo $row["color"]?></td>
+              <td><?php echo $row["chassisNum"]?></td>
+              <td><?php echo $row["engineNum"]?></td>
+              <td>
+              <a href="#"><button class="btn-car">Create Route</button></a>
+              </td>
             </tr>
   
         <?php }  }?>

@@ -18,6 +18,7 @@ $user = $_GET['user'];
     <a href="#about">About</a>
     <a class="right" href="index.php">Log Out</a>
     <a class="right" href="profile.php?user=<?php echo $user?>">Profile</a>
+    <a class="right" href="wallet.php?user=<?php echo $user?>">Wallet</a>
 </div>
 
 

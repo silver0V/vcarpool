@@ -9,15 +9,13 @@
 </head>
 <body>
 <div class="topnav">
-    <a class="active" href="adminpg.php">Home</a>
-    <a href="report.php">Daily Reports</a>
-    <a href="carverify.php">Cash Out Approval</a>
+    <a href="adminpg.php">Home</a>
+    <a class="active" href="report.php">Daily Reports</a>
     <a href="carverify.php">Car Verification</a>
     <a href="userlist.php">List of Users</a>
     <a class="right" href="index.php">Log Out</a>
     <a class="right" href="profile.php">Profile</a>
 </div>
-    <h1>Welcome Admin!</h1>
 
 </body>
 </html>
